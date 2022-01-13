@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+ <main class="content">
+<div class="id_post">{{ id_post }}</div>
+ <div class="name_acs">{{ name_id }}</div>
+ <div class="start_time">{{ start_time }}</div>
+
+
+     <script>var id_msg = document.getElementsByClassName("id_post");
+var id_name = document.getElementsByClassName("name_acs");
+var start_time = document.getElementsByClassName("start_time");
+
+</script>
+    <h3>Текст поста</h3>
+    <div class="post">{{ text_post }}</div>
+
+    <div class="estimate">
+        <form id="myform">
+        <div class="estimate-item">
+            <div class="lable">Предметность</div>
+            <div class="stars">
+                <div class="rating-area">
+                    <input type="radio" id="star-15" name="objectivity" value="5" onclick="getVal(this)">
+                    <label for="star-15" title="Оценка «5»"></label>
+                    <input type="radio" id="star-14" name="objectivity" value="4" onclick="getVal(this)">
+                    <label for="star-14" title="Оценка «4»"></label>
+                    <input type="radio" id="star-13" name="objectivity" value="3" onclick="getVal(this)">
+                    <label for="star-13" title="Оценка «3»"></label>
+                    <input type="radio" id="star-12" name="objectivity" value="2" onclick="getVal(this)">
+                    <label for="star-12" title="Оценка «2»"></label>
+                    <input type="radio" id="star-11" name="objectivity" value="1" onclick="getVal(this)">
+                    <label for="star-11" title="Оценка «1»"></label>
+                </div>
+            </div>
+        </div>
+        <div class="estimate-item">
+            <div class="lable">Перспективность</div>
+            <div class="stars">
+                <div class="rating-area">
+                    <input type="radio" id="star-25" name="perspective" value="5" onclick="getVal(this)">
+                    <label for="star-25" title="Оценка «5»"></label>
+                    <input type="radio" id="star-24" name="perspective" value="4" onclick="getVal(this)">
+                    <label for="star-24" title="Оценка «4»"></label>
+                    <input type="radio" id="star-23" name="perspective" value="3" onclick="getVal(this)">
+                    <label for="star-23" title="Оценка «3»"></label>
+                    <input type="radio" id="star-22" name="perspective" value="2" onclick="getVal(this)">
+                    <label for="star-22" title="Оценка «2»"></label>
+                    <input type="radio" id="star-21" name="perspective" value="1" onclick="getVal(this)">
+                    <label for="star-21" title="Оценка «1»"></label>
+                </div>
+            </div>
+        </div>
+        <div class="estimate-item">
+            <div class="lable">Сомнения</div>
+            <div class="stars">
+                <div class="rating-area">
+                    <input type="radio" id="star-35" name="doubts" value="5" onclick="getVal(this)">
+                    <label for="star-35" title="Оценка «5»"></label>
+                    <input type="radio" id="star-34" name="doubts" value="4" onclick="getVal(this)">
+                    <label for="star-34" title="Оценка «4»"></label>
+                    <input type="radio" id="star-33" name="doubts" value="3" onclick="getVal(this)">
+                    <label for="star-33" title="Оценка «3»"></label>
+                    <input type="radio" id="star-32" name="doubts" value="2" onclick="getVal(this)">
+                    <label for="star-32" title="Оценка «2»"></label>
+                    <input type="radio" id="star-31" name="doubts" value="1" onclick="getVal(this)">
+                    <label for="star-31" title="Оценка «1»"></label>
+                </div>
+            </div>
+        </div>
+        <div class="estimate-item">
+            <div class="lable">Сомнения на фоне успеха</div>
+            <div class="stars">
+                <div class="rating-area">
+                    <input type="radio" id="star-45" name="doubts_success" value="5" onclick="getVal(this)">
+                    <label for="star-45" title="Оценка «5»"></label>
+                    <input type="radio" id="star-44" name="doubts_success" value="4" onclick="getVal(this)">
+                    <label for="star-44" title="Оценка «4»"></label>
+                    <input type="radio" id="star-43" name="doubts_success" value="3" onclick="getVal(this)">
+                    <label for="star-43" title="Оценка «3»"></label>
+                    <input type="radio" id="star-42" name="doubts_success" value="2" onclick="getVal(this)">
+                    <label for="star-42" title="Оценка «2»"></label>
+                    <input type="radio" id="star-41" name="doubts_success" value="1" onclick="getVal(this)">
+                    <label for="star-41" title="Оценка «1»"></label>
+                </div>
+            </div>
+        </div>
+        <div class="estimate-item">
+            <div class="lable">Удовлетворение
+                потребностей ЦА</div>
+            <div class="stars">
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="meeting_needs" value="5" onclick="getVal(this)">
+                    <label for="star-5" title="Оценка «5»"></label>
+                    <input type="radio" id="star-4" name="meeting_needs" value="4" onclick="getVal(this)">
+                    <label for="star-4" title="Оценка «4»"></label>
+                    <input type="radio" id="star-3" name="meeting_needs" value="3" onclick="getVal(this)">
+                    <label for="star-3" title="Оценка «3»"></label>
+                    <input type="radio" id="star-2" name="meeting_needs" value="2" onclick="getVal(this)">
+                    <label for="star-2" title="Оценка «2»"></label>
+                    <input type="radio" id="star-1" name="meeting_needs" value="1" onclick="getVal(this)">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+            </div>
+        </div>
+
+        </form>
+            <script>var el=document.getElementById('myform');
+
+</script>
+        <button id="submit_button" onclick="submit(id_msg[0].textContent,id_name[0].textContent,start_time,el)">Оценить</button>
+        <script>
+              if (id_msg[0].textContent=='end') {
+        console.log('Конец')
+        var but=document.getElementById('submit_button');
+        but.disabled=true;
+    }
+    </script>
+
+    </div>
+</main>
+
+{% endblock %}
